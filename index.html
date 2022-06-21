@@ -2,8 +2,74 @@
 <html>
 <head>
 	<title>Yizhen's Personal Website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Great+Vibes&family=Inter:wght@500&display=swap" rel="stylesheet">
+
 </head>
+<style type="text/css">
+	
+body {
+  background-color: #fff;
+}
+
+#logo {
+	 font-size: 58px;
+	font-family: 'Abril Fatface', cursive;
+	float:  left;
+}
+
+.nav-link{
+	float:  left;
+	padding: 10px;
+	line-height: 58px;
+}
+
+nav{
+	float: right;
+	clear: right;
+}
+
+#self-intro{
+	clear: left;
+    height: 100vh;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100vh;
+    background: #ccc;
+    font-size: 98px;
+}
+</style>
 <body>
-  I am Yizhen chen. 
+  <header>
+  	<div id="logo">YZ </div>
+  	<nav> 
+  		<div class="nav-link"> About</div>
+  		<div class="nav-link"> Projects</div>
+  		<div class="nav-link"> Blog</div>
+  		<div class="nav-link"> Contact</div>
+  	</nav>
+  </header>
+  <section id="self-intro">
+  	<!--  Hi,I am Yizhen Chen
+  	 <br>
+  	 A <span style="color: red"> software engineer </span> based on Maryland.  -->
+  	 <div id="typing"> </div>
+  </section>
+
+  <script>
+var i = 0;
+var txt = 'Hi, I am Yizhen Chen';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("typing").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+typeWriter();
+</script>
 </body>
 </html>
